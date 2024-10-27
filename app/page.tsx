@@ -1,9 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "@/components/ui/icons/ChevronDown";
-import { Music } from "@/components/ui/icons/Music";
-import { MusicOff } from "@/components/ui/icons/MusicOff";
+import { ChevronDown } from "@/components/icons/ChevronDown";
+import { Music } from "@/components/icons/Music";
+import { MusicOff } from "@/components/icons/MusicOff";
 import {
     Box,
     Center,
@@ -15,6 +15,7 @@ import {
     VStack,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
+import EmblaCarousel from "@/components/EmblaCarousel";
 
 const Slide = ({
     backgroundUrl,
@@ -291,6 +292,52 @@ export default function Home() {
                             </Flex>
                         </VStack>
                     </Box>
+                    <Box
+                        color={"mainColorText"}
+                        textAlign={"center"}
+                        padding={"50px 0 200px"}
+                    >
+                        <Box
+                            fontFamily={"headingAlternative"}
+                            fontWeight={"bold"}
+                            letterSpacing={"2px"}
+                            fontSize={"12px"}
+                        >
+                            <Text>DEAR MR-MRS-MS,</Text>
+                            <Text>FAMILY & FRIENDS</Text>
+                        </Box>
+                        <Heading
+                            lineHeight={"1.2"}
+                            padding={"24px 0"}
+                            fontSize={"32px"}
+                        >
+                            Welcome to
+                            <br />
+                            Tiffany & Jared&apos;s
+                            <br />
+                            Wedding Website
+                        </Heading>
+                        <Text
+                            fontFamily={"body"}
+                            fontStyle={"italic"}
+                            fontSize={"18px"}
+                            padding={"0 10% 24px"}
+                            mb={"18px"}
+                        >
+                            Together with joyful hearts and the grace of God, we
+                            joyfully announce the upcoming of our marriage.
+                        </Text>
+                        <EmblaCarousel
+                            slides={[
+                                "https://invitato.net/test-product-engineer/static/5-ffa38a07e15195800fbcc590cb50b2d0.jpg",
+                                "https://invitato.net/test-product-engineer/static/1-2b43ea516254cdff99c88a7fce90ae98.jpg",
+                                "https://invitato.net/test-product-engineer/static/2-9fafa4bf7091b5207804ffe51f518939.jpg",
+                            ]}
+                            options={{
+                                loop: true,
+                            }}
+                        />
+                    </Box>
                 </Show>
             </Box>
             <Show when={init}>
@@ -303,6 +350,12 @@ export default function Home() {
                     borderRadius={"50%"}
                     backgroundColor={"rgb(153, 122, 94)"}
                     onClick={togglePlay}
+                    _active={{
+                        backgroundColor: "gray.300",
+                    }}
+                    _hover={{
+                        backgroundColor: "gray.200",
+                    }}
                 >
                     {audioPlaying ? <Music /> : <MusicOff />}
                 </IconButton>
