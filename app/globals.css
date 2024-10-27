@@ -9,3 +9,21 @@
       transform: translateY(-5px)
   }
 }
+
+@keyframes slide {
+  10% {
+      opacity: 1
+  }
+
+  20% {
+      opacity: 1
+  }
+
+  30% {
+      opacity: 0
+  }
+
+  40% {
+      transform: scale(1.1)
+  }
+}
