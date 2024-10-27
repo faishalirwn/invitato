@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import EmblaCarousel from "@/components/EmblaCarousel";
+import { FadeInSection } from "@/components/FadeInSection";
 
 const Slide = ({
     backgroundUrl,
@@ -95,15 +96,17 @@ export default function Home() {
                     borderColor={"blackAlpha.400"}
                     background={`linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url("https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Desktop.jpg?updatedAt=1698223781539") center center / cover`}
                 >
-                    <Heading
-                        fontFamily="headingAlternative"
-                        letterSpacing={"2px"}
-                        fontSize="md"
-                        lineHeight={"1.5"}
-                        fontWeight={"700"}
-                    >
-                        WEDDING ANNOUNCEMENT
-                    </Heading>
+                    <FadeInSection>
+                        <Heading
+                            fontFamily="headingAlternative"
+                            letterSpacing={"2px"}
+                            fontSize="md"
+                            lineHeight={"1.5"}
+                            fontWeight={"700"}
+                        >
+                            WEDDING ANNOUNCEMENT
+                        </Heading>
+                    </FadeInSection>
                     <Box paddingTop={"32px"}>
                         <Heading
                             fontSize="7xl"
@@ -125,21 +128,24 @@ export default function Home() {
                             JARED
                         </Heading>
                     </Box>
-                    <Text
-                        fontFamily="body"
-                        fontStyle="italic"
-                        fontWeight={"300"}
-                        letterSpacing={"1px"}
-                        maxW={"800px"}
-                        fontSize={"16px"}
-                    >
-                        &quot;Aku ingin mencintaimu dengan sederhana; dengan
-                        kata yang tak sempat diucapkan kayu kepada api yang
-                        menjadikannya abu. Aku ingin mencintaimu dengan
-                        sederhana; dengan isyarat yang tak sempat disampaikan
-                        awan kepada hujan yang menjadikannya tiada.&quot;
-                        <br />— Sapardi Djoko Damono
-                    </Text>
+                    <FadeInSection>
+                        <Text
+                            fontFamily="body"
+                            fontStyle="italic"
+                            fontWeight={"300"}
+                            letterSpacing={"1px"}
+                            maxW={"800px"}
+                            fontSize={"16px"}
+                        >
+                            &quot;Aku ingin mencintaimu dengan sederhana; dengan
+                            kata yang tak sempat diucapkan kayu kepada api yang
+                            menjadikannya abu. Aku ingin mencintaimu dengan
+                            sederhana; dengan isyarat yang tak sempat
+                            disampaikan awan kepada hujan yang menjadikannya
+                            tiada.&quot;
+                            <br />— Sapardi Djoko Damono
+                        </Text>
+                    </FadeInSection>
                 </Box>
             </Box>
             <Box w="500px">
@@ -305,36 +311,43 @@ export default function Home() {
                         padding={"50px 0 200px"}
                         ref={welcomeSection}
                     >
-                        <Box
-                            fontFamily={"headingAlternative"}
-                            fontWeight={"bold"}
-                            letterSpacing={"2px"}
-                            fontSize={"12px"}
-                        >
-                            <Text>DEAR MR-MRS-MS,</Text>
-                            <Text>FAMILY & FRIENDS</Text>
-                        </Box>
-                        <Heading
-                            lineHeight={"1.2"}
-                            padding={"24px 0"}
-                            fontSize={"32px"}
-                        >
-                            Welcome to
-                            <br />
-                            Tiffany & Jared&apos;s
-                            <br />
-                            Wedding Website
-                        </Heading>
-                        <Text
-                            fontFamily={"body"}
-                            fontStyle={"italic"}
-                            fontSize={"18px"}
-                            padding={"0 10% 24px"}
-                            mb={"18px"}
-                        >
-                            Together with joyful hearts and the grace of God, we
-                            joyfully announce the upcoming of our marriage.
-                        </Text>
+                        <FadeInSection>
+                            <Box
+                                fontFamily={"headingAlternative"}
+                                fontWeight={"bold"}
+                                letterSpacing={"2px"}
+                                fontSize={"12px"}
+                            >
+                                <Text>DEAR MR-MRS-MS,</Text>
+                                <Text>FAMILY & FRIENDS</Text>
+                            </Box>
+                        </FadeInSection>
+                        <FadeInSection>
+                            <Heading
+                                lineHeight={"1.2"}
+                                padding={"24px 0"}
+                                fontSize={"32px"}
+                            >
+                                Welcome to
+                                <br />
+                                Tiffany & Jared&apos;s
+                                <br />
+                                Wedding Website
+                            </Heading>
+                        </FadeInSection>
+                        <FadeInSection>
+                            <Text
+                                fontFamily={"body"}
+                                fontStyle={"italic"}
+                                fontSize={"18px"}
+                                padding={"0 10% 24px"}
+                                mb={"18px"}
+                            >
+                                Together with joyful hearts and the grace of
+                                God, we joyfully announce the upcoming of our
+                                marriage.
+                            </Text>
+                        </FadeInSection>
                         <EmblaCarousel
                             slides={[
                                 "https://invitato.net/test-product-engineer/static/5-ffa38a07e15195800fbcc590cb50b2d0.jpg",
