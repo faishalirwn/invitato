@@ -3,3 +3,9 @@
     padding: 0;
     margin: 0;
 }
+
+@keyframes MoveUpDown {
+  50% {
+      transform: translateY(-5px)
+  }
+}

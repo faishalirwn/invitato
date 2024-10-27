@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, Text, VStack } from "@chakra-ui/react";
+import styles from "./page.module.css";
 
 export default function Home() {
     return (
@@ -28,6 +29,7 @@ export default function Home() {
                             fontSize="7xl"
                             fontWeight="light"
                             letterSpacing={"4px"}
+                            textTransform={"uppercase"}
                             lineHeight={"1"}
                         >
                             TIFFANY &
@@ -36,6 +38,7 @@ export default function Home() {
                             fontSize="7xl"
                             fontWeight="light"
                             letterSpacing={"4px"}
+                            textTransform={"uppercase"}
                             marginTop={"-16px"}
                             lineHeight={"1.5"}
                         >
@@ -62,24 +65,61 @@ export default function Home() {
             <Box
                 w="500px"
                 bgColor="grey"
-                // bgImage="url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/1.%20Cover.jpg?updatedAt=1698222296920)"
+                background={
+                    "linear-gradient(rgb(50 48 48/ 50%), rgb(50 48 48 / 50%)),center/cover url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/1.%20Cover.jpg?updatedAt=1698222296920)"
+                }
             >
-                <Box minH="100vh">
-                    <Heading>WEDDING ANNOUNCEMENT</Heading>
-                    <div>
-                        <Heading>Tiffany & Jared</Heading>
-                        <Heading>#TImetoshaRE</Heading>
-                    </div>
-                    <Button>Open</Button>
-                </Box>
-                <Box minH="100vh">
-                    <Heading>WEDDING ANNOUNCEMENT</Heading>
-                    <div>
-                        <Heading>Tiffany & Jared</Heading>
-                        <Heading>#TImetoshaRE</Heading>
-                    </div>
-                    <Button>Open</Button>
-                </Box>
+                <Center>
+                    <VStack
+                        minH="100vh"
+                        textAlign={"center"}
+                        justifyContent={"space-between"}
+                    >
+                        <Heading
+                            fontFamily="headingAlternative"
+                            letterSpacing={"2px"}
+                            fontSize="md"
+                            lineHeight={"1.5"}
+                            fontWeight={"700"}
+                            mt={"92px"}
+                        >
+                            WEDDING ANNOUNCEMENT
+                        </Heading>
+                        <Box mt={"130px"}>
+                            <Heading
+                                fontSize="4xl"
+                                fontWeight="light"
+                                lineHeight={"1.2"}
+                                textTransform={"uppercase"}
+                            >
+                                Tiffany & Jared
+                            </Heading>
+                            <Heading
+                                fontSize="4xl"
+                                fontWeight="light"
+                                lineHeight={"1.2"}
+                                fontFamily={"body"}
+                                fontStyle={"italic"}
+                            >
+                                #TImetoshaRE
+                            </Heading>
+                        </Box>
+                        <Button
+                            mb={"250px"}
+                            h={"2rem"}
+                            p={"0 2.4rem"}
+                            fontFamily={"body"}
+                            fontStyle={"italic"}
+                            fontSize={"lg"}
+                            borderRadius={"0"}
+                            border={"1px solid #1A1B1D"}
+                            color={"secondaryColorText"}
+                            animation={"MoveUpDown 3s linear infinite"}
+                        >
+                            Open
+                        </Button>
+                    </VStack>
+                </Center>
             </Box>
         </Flex>
     );
