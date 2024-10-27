@@ -7,7 +7,8 @@ import { system } from "@/styles/theme";
 export function Provider(props: React.PropsWithChildren) {
     return (
         <ChakraProvider value={system}>
-            <ColorModeProvider>{props.children}</ColorModeProvider>
+            {/* <ColorModeProvider>{props.children}</ColorModeProvider> */}
+            {props.children}
         </ChakraProvider>
     );
 }
