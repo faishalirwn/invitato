@@ -394,7 +394,23 @@ export default function Home() {
                         backgroundColor: "gray.200",
                     }}
                 >
-                    {audioPlaying ? <Music /> : <MusicOff />}
+                    <Box>
+                        {audioPlaying ? (
+                            <Music
+                                style={{
+                                    width: "14px",
+                                    height: "14px",
+                                }}
+                            />
+                        ) : (
+                            <MusicOff
+                                style={{
+                                    width: "14px",
+                                    height: "14px",
+                                }}
+                            />
+                        )}
+                    </Box>
                 </IconButton>
             </Show>
         </Flex>
