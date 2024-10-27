@@ -22,7 +22,7 @@ export const FadeInSection: React.FC<PropType> = (props) => {
                 observer.unobserve(currentDomRef);
             }
         };
-    }, []);
+    }, [isVisible]);
     return (
         <div
             className={`fade-in-section ${isVisible ? "is-visible" : ""}`}

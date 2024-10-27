@@ -85,9 +85,23 @@ export default function Home() {
     };
 
     return (
-        <Flex justifyContent="space-between">
-            <Box color="alternativeColorText">
+        <Flex
+            justifyContent="center"
+            lg={{
+                justifyContent: "space-between",
+            }}
+        >
+            <Box
+                display="none"
+                sm={{
+                    display: "none",
+                }}
+                lg={{
+                    display: "block",
+                }}
+            >
                 <Box
+                    color="alternativeColorText"
                     padding={"42px"}
                     pos="fixed"
                     w="calc(100% - 500px)"
