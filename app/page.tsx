@@ -341,10 +341,11 @@ export default function Home() {
                                 lineHeight={"1.2"}
                                 padding={"24px 0"}
                                 fontSize={"32px"}
+                                fontWeight={"medium"}
                             >
                                 Welcome to
                                 <br />
-                                Tiffany & Jared&apos;s
+                                Tiffany & Jared’s
                                 <br />
                                 Wedding Website
                             </Heading>
@@ -356,6 +357,7 @@ export default function Home() {
                                 fontSize={"18px"}
                                 padding={"0 10% 24px"}
                                 mb={"18px"}
+                                fontWeight={"light"}
                             >
                                 Together with joyful hearts and the grace of
                                 God, we joyfully announce the upcoming of our

@@ -10,13 +10,26 @@ const newsreader = Newsreader({
     weight: ["300", "400"],
     variable: "--font-newsreader",
 });
+
 const poppins = Poppins({
     subsets: ["latin"],
     weight: "700",
     variable: "--font-poppins",
 });
+
 const butler = localFont({
-    src: "../public/Butler_Light.otf",
+    src: [
+        {
+            path: "../public/Butler_Light.otf",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "../public/Butler_Medium.otf",
+            weight: "500",
+            style: "normal",
+        },
+    ],
     display: "swap",
     variable: "--font-butler",
 });
