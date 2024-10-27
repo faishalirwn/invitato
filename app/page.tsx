@@ -51,6 +51,7 @@ export default function Home() {
               )
             : null
     );
+    const welcomeSection = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         if (clicked && audioRef.current) {
@@ -75,6 +76,11 @@ export default function Home() {
             audioRef.current.play();
         }
         setAudioPlaying(!audioPlaying);
+    };
+
+    const scrollToSection = () => {
+        if (!welcomeSection.current) return;
+        welcomeSection.current.scrollIntoView({ behavior: "smooth" });
     };
 
     return (
@@ -278,6 +284,7 @@ export default function Home() {
                                 justifyContent={"flex-end"}
                                 alignItems={"center"}
                                 cursor={"pointer"}
+                                onClick={scrollToSection}
                             >
                                 <Text
                                     fontFamily={"headingAlternative"}
@@ -296,6 +303,7 @@ export default function Home() {
                         color={"mainColorText"}
                         textAlign={"center"}
                         padding={"50px 0 200px"}
+                        ref={welcomeSection}
                     >
                         <Box
                             fontFamily={"headingAlternative"}
